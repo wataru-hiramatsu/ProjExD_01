@@ -18,6 +18,7 @@ def main():
 
         tmr += 1
         screen.blit(bg_img, [0, 0])
+        screen.blit(kk_img_lst[tmr % len(kk_img_lst)], [300, 200])
 
         pg.display.update()
         clock.tick(100)

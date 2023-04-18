@@ -22,9 +22,10 @@ def main():
         tmr += 1
 
         # 背景の描画
-        bg_x_count = tmr % 1600
+        bg_x_count = tmr % 3200
         screen.blit(bg_img_lst[0], [-bg_x_count, 0])
         screen.blit(bg_img_lst[1], [1600 - bg_x_count, 0])
+        screen.blit(bg_img_lst[0], [3200 - bg_x_count, 0])
 
         # こうかとんの描画
         if tmr % 100 == 0:

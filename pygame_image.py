@@ -20,7 +20,7 @@ def main():
 
         bg_x_count = tmr % 1600
         screen.blit(bg_img, [-bg_x_count, 0])
-        screen.blit(bg_img, [1600 - bg_x_count, 0])
+        screen.blit(pg.transform.flip(bg_img, True, False), [1600 - bg_x_count, 0])
 
         if tmr % 100 == 0:
             kk_idx = (kk_idx + 1) % len(kk_img_lst)

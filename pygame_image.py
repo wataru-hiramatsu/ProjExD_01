@@ -17,7 +17,11 @@ def main():
             if event.type == pg.QUIT: return
 
         tmr += 1
-        screen.blit(bg_img, [0, 0])
+        
+        bg_x_count = tmr % 1600
+        screen.blit(bg_img, [-bg_x_count, 0])
+        screen.blit(bg_img, [1600 - bg_x_count, 0])
+
         screen.blit(kk_img_lst[tmr % len(kk_img_lst)], [300, 200])
 
         pg.display.update()
